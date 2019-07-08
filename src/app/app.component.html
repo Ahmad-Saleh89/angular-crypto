@@ -1,0 +1,13 @@
+<div class="container"><br>
+  <app-trade-entry 
+    (cryptoBought)="onCryptoBought($event)"
+    (cryptoSold)="onCryptoSold($event)"></app-trade-entry>
+  <div class="row">
+    <div class="col-12">
+      <app-trade-item 
+        *ngFor="let coin of cryptoCoins"
+        [cryptoCoin]="coin"
+      ></app-trade-item>
+    </div>
+  </div>
+</div>

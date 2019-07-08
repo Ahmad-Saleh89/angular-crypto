@@ -1,0 +1,10 @@
+<div
+  class="card" style="margin-top:10px">
+  <div class="card-header">{{ cryptoCoin.name }}</div>
+  <div class="card-body">
+    <p class="card-text">
+      <strong *ngIf="cryptoCoin.type === 'buying'" style="color: green">$ {{ cryptoCoin.price }}</strong>
+      <em *ngIf="cryptoCoin.type === 'selling'" style="color: red">$ {{ cryptoCoin.price }}</em>
+    </p>
+  </div>
+</div>
