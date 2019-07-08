@@ -7,21 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   
-    cryptoCoins = [{type: 'buying', name: 'Bitcoin', price: '10,000'}];
+    cryptoCoins = [{type: 'buying', name: 'Bitcoin', amount: '10,000'}];
 
-    onCryptoBought(buyingData: {cryptoName: string, cryptoPrice: string}){
+    onCryptoBought(buyingData: {cryptoName: string, cryptoAmount: string}){
       this.cryptoCoins.push({
         type: 'buying',
         name: buyingData.cryptoName,
-        price: buyingData.cryptoPrice
+        amount: buyingData.cryptoAmount
       });
     }
 
-    onCryptoSold(sellingData: {cryptoName: string, cryptoPrice: string}) {
+    onCryptoSold(sellingData: {cryptoName: string, cryptoAmount: string}) {
       this.cryptoCoins.push({
         type: 'selling',
         name: sellingData.cryptoName,
-        price: sellingData.cryptoPrice
+        amount: sellingData.cryptoAmount
       });
     }
 

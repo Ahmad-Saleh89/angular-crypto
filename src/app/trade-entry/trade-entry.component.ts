@@ -7,11 +7,11 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class TradeEntryComponent implements OnInit {
 
-  @Output() cryptoBought = new EventEmitter<{cryptoName: string, cryptoPrice: string}>();
-  @Output() cryptoSold= new EventEmitter<{cryptoName: string, cryptoPrice: string}>();
+  @Output() cryptoBought = new EventEmitter<{cryptoName: string, cryptoAmount: string}>();
+  @Output() cryptoSold= new EventEmitter<{cryptoName: string, cryptoAmount: string}>();
 
   newCryptoName = '';
-  newCryptoPrice = '';
+  newCryptoAmount = '';
 
 
   constructor() { }
@@ -20,10 +20,17 @@ export class TradeEntryComponent implements OnInit {
   }
 
   onBuyCrypto() {
-    this.cryptoBought.emit({cryptoName: this.newCryptoName, cryptoPrice: this.newCryptoPrice});
+    this.cryptoBought.emit({cryptoName: this.newCryptoName, cryptoAmount: this.newCryptoAmount});
+    this.clearFields();
   }
 
   onSellCrypto() {
-    this.cryptoSold.emit({cryptoName: this.newCryptoName, cryptoPrice: this.newCryptoPrice});
+    this.cryptoSold.emit({cryptoName: this.newCryptoName, cryptoAmount: this.newCryptoAmount});
+    this.clearFields();
+  }
+
+  clearFields(){
+    this.newCryptoName = '';
+    this.newCryptoAmount = '';
   }
 }

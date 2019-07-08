@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class TradeItemComponent implements OnInit {
 
-  @Input('cryptoCoin') cryptoCoin: {type: string, name: string, price: string};
+  @Input('cryptoCoin') cryptoCoin: {type: string, name: string, amount: string};
 
   constructor() { }
 
