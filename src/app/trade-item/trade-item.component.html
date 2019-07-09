@@ -1,10 +1,9 @@
-<div
-  class="card" style="margin-top:10px">
-  <div class="card-header">{{ cryptoCoin.name }}</div>
+<div class="card" style="margin-top:10px">
+  <div class="card-header">{{ myCoin.name }}</div>
   <div class="card-body">
     <p class="card-text">
-      <strong *ngIf="cryptoCoin.type === 'buying'" style="color: green">${{ cryptoCoin.amount }} Purchased</strong>
-      <em *ngIf="cryptoCoin.type === 'selling'" style="color: red">${{ cryptoCoin.amount }} Sold</em>
+      <strong *ngIf="myCoin.type === 'buying'" style="color: green">${{ myCoin.amount }} Purchased</strong>
+      <em *ngIf="myCoin.type === 'selling'" style="color: red">${{ myCoin.amount }} Sold</em>
     </p>
   </div>
 </div>
