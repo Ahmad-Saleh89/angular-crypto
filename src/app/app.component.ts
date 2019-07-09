@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { CRYPTOCOINS, CryptoCoin } from './crypto-coin'
+
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
@@ -7,7 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   
-    cryptoCoins = [{type: 'buying', name: 'Bitcoin', amount: '10,000'}];
+    cryptoCoins: CryptoCoin[] = CRYPTOCOINS;
 
     onCryptoBought(buyingData: {cryptoName: string, cryptoAmount: string}){
       this.cryptoCoins.push({
