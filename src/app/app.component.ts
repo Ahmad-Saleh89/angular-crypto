@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { CRYPTOCOINS, CryptoCoin } from './crypto-coin'
+import { CRYPTOCOINS, CryptoCoin } from './crypto-coin';
 
 @Component({
   selector: 'my-app',
